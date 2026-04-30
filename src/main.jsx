@@ -3,8 +3,11 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from './Layout/RootLayout';
-import Apps from './pages/apps/Apps';
+import Stats from './pages/stats/Stats';
+import Timeline from './pages/timeline/timeline';
 import Homepage from './pages/Homepage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+import FriendDetails from './pages/FriendDetails/FriendDetails';
 
 const router = createBrowserRouter(
   [
@@ -17,15 +20,24 @@ const router = createBrowserRouter(
           element: <Homepage />
         },
         {
-          path: '/apps',
-          element: <Apps />
+          path: '/stats',
+          element: <Stats />
         },
+        {
+          path: '/timeline',
+          element: <Timeline />
+        },
+         {
+          path: '/friend/:id',
+
+          element: <FriendDetails />
+        }
       ],
-      errorElement: <h2>This page is not found 😢</h2>,
+      errorElement: <NotFoundPage />,
     },
   ],
   {
-    basename: "/Keen-Keeper", 
+    basename: "/keen-keeper/", 
   }
 );
 
