@@ -37,7 +37,7 @@ export default function FriendDetails() {
     const prev = JSON.parse(localStorage.getItem("timeline")) || [];
     localStorage.setItem("timeline", JSON.stringify([entry, ...prev]));
 
-    toast.success(`${type} added!`);
+    toast.success(`${type} with ${friend.name}`);
   };
 
   if (!friend) return <p>Loading...</p>;
