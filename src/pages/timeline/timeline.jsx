@@ -23,7 +23,6 @@ export default function Timeline() {
 
       <div className="flex gap-2 my-4">
         {["All", "Call", "Text", "Video"].map(f => (
-          // <button className="text-[#64748B] font-medium hover:bg-[#244D3F] px-3 py-3 rounded-xl hover:text-white " key={f} onClick={() => setFilter(f)}>{f}</button>
           <button
             key={f}
              onClick={() => setFilter(f)}
@@ -52,5 +51,11 @@ export default function Timeline() {
       ))}
       </div>
     </div>
+    
   );
 }
+
+
+
+  
+  
