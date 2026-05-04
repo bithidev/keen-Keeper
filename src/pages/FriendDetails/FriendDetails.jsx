@@ -20,13 +20,19 @@ export default function FriendDetails() {
   }, [id]);
 
   const handleAction = (type) => {
+    // const entry = {
+    //   type,
+    //   date: new Date().toLocaleDateString(),
+    //   title: `${type} with ${friend.name}`
+      
+      
+    // };
+
     const entry = {
-      type,
-      date: new Date().toLocaleDateString(),
-      title: `${type} with ${friend.name}`
-      
-      
-    };
+    type,
+    name: friend.name,
+    date: new Date().toLocaleDateString()
+   };
 
     const prev = JSON.parse(localStorage.getItem("timeline")) || [];
     localStorage.setItem("timeline", JSON.stringify([entry, ...prev]));
@@ -110,15 +116,15 @@ export default function FriendDetails() {
 
       <div className="mt-6 gap-4 bg-white p-6 rounded-lg">
         <h3 className="text-xl font-medium pb-4">Quick Check-In</h3>
-        <div className="flex gap-6">
-          <div className="bg-[#F8FAFC]">
-          <button onClick={() => handleAction("Call")} className="btn p-10 w-full"><LuPhoneCall />Call</button>
+        <div className="flex gap-6 justify-around ">
+          <div className="bg-[#F8FAFC] w-full">
+          <button onClick={() => handleAction("Call")} className="btn py-12 w-full"><LuPhoneCall />Call</button>
           </div>
-        <div className="bg-[#F8FAFC]">
-          <button onClick={() => handleAction("Text")} className="btn p-10"> <MdTextsms />Text</button>
+        <div className="bg-[#F8FAFC] w-full">
+          <button onClick={() => handleAction("Text")} className="btn py-12 w-full"> <MdTextsms />Text</button>
         </div>
-        <div className="bg-[#F8FAFC]">
-          <button onClick={() => handleAction("Video")} className="btn p-10"><CiVideoOn />Video</button>
+        <div className="bg-[#F8FAFC] w-full">
+          <button onClick={() => handleAction("Video")} className="btn py-12 w-full"><CiVideoOn />Video</button>
         </div>
         </div>
       </div>

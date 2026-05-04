@@ -26,6 +26,27 @@ export default function Home() {
          </div>
       </div>
 
+      <div className="flex justify-around gap-6">
+        <div className="bg-white w-full p-8 rounded-lg text-center">
+          <p className="font-semibold text-[#244D3F] text-[32px]">10</p>
+          <p className="pt-2 text-lg text-[#64748B]">Total Friends</p>
+        </div>
+        <div className="bg-white w-full p-8 rounded-lg text-center">
+          <p className="font-semibold text-[#244D3F] text-[32px]">3</p>
+          <p className="pt-2 text-lg text-[#64748B]">On Track</p>
+        </div>
+        <div className="bg-white w-full p-8 rounded-lg text-center">
+          <p className="font-semibold text-[#244D3F] text-[32px]">6</p>
+          <p className="pt-2 text-lg text-[#64748B]">Need Attention</p>
+        </div>
+        <div className="bg-white w-full p-8 rounded-lg text-center">
+          <p className="font-semibold text-[#244D3F] text-[32px]">12</p>
+          <p className="pt-2 text-lg text-[#64748B]">Need Attention</p>
+        </div>
+      </div>
+      
+  <div className="divider py-10"></div>
+ 
       <h2 className="text-[#1F2937] font-semibold text-2xl">Your Friends</h2>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 p-6">
         {friends.map(f => (
